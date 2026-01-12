@@ -19,9 +19,9 @@ jobs:
       fail-fast: false
       matrix:
         version:
-          - "1"
+          # - "1"    # Disabled: ODEInterface needs fixes. See #89
           - "lts"
-          - "pre"
+          # - "pre"  # Disabled: ODEInterface needs fixes. See #89
     uses: "SciML/.github/.github/workflows/tests.yml@v1"
     with:
       julia-version: "${{ matrix.version }}"
